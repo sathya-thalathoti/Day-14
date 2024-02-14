@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2;
+}
+
+table{
+    text-align: center;
+    margin: 20px auto 50px;
+    width: 95vw;
+    height: 40vh;
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    background-color: #f8f8f8;
+    
+}
+
+table caption{
+    font-size: 1.5rem;
+    margin:20px auto;
+}
+
+tr{
+    border-bottom: 2px solid #ccc;
+    /* background-color: aqua; */
+}
+
+@media screen and (max-width: 600px){
+    caption{
+        font-size: 1rem;
+    }
+
+    table{
+        border: none;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50px;
+      }
+    
+    tr{
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    tr,td{
+        display: block;
+        text-align: right;
+    }
+
+    td::before{
+        position:absolute;
+        top: 6px;
+        left: 6px;
+    }
+
+    td:nth-of-type(1):before{
+        content: "Account";
+    }
+
+    td:nth-of-type(2):before{
+        content: "Due Date";
+    }
+
+    td:nth-of-type(3):before{
+        content: "Amount";
+    }
+
+    td:nth-of-type(4):before{
+        content: "Period";
+    }
+    td:before{
+        font-weight: bold;
+    }
+}
+
+
+/* Registration Form */
+
+h3{
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.content{
+    border: 2px solid white;
+    margin: 50px auto;
+    width: 70vw;
+    height: 105vh;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(250,218,221,0.5);
+}
+
+.section{
+     padding-bottom: 50px;
+     padding-top: 50px;
+     height: 120vh;
+     background-color: #c6def1;
+}
+
+.item{
+    width: 42%;
+    /* border: 2px dotted #ccc; */
+    display: inline-block;
+    margin: 20px 30px 30px 20px;
+}
+
+.special{
+    width: 93%;
+    /* border: 2px dotted #ccc; */
+    display: block;
+    margin: 20px 30px 30px 20px;
+}
+
+input:not([type=radio]){
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #ccc;
+    height: 35px;
+    border-radius: 6px;
+}
+
+input[type=radio]{
+    margin: 5px 10px; 
+}
+
+input[type=radio]:first-of-type{
+    margin-left: 0;
+}
+
+
+label{
+    margin-bottom: 5px;
+    display: block;
+}
+
+span{
+    margin-right: 25px ;
+}
+
+input[type=submit]{
+    border: none;
+    background-color: #c9e4de;
+}
+
+@media (min-width: 601px) and (max-width: 800px){
+    h3{
+        text-align: center;
+    }
+
+    .content{
+        height: 160vh;
+    }
+
+    .item{
+        width: 93%;
+        margin: 10px 10px;
+    }
+
+    .section{
+        height: 180vh;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .content{
+        height: 170vh;
+    }
+
+    .section{
+        height: 190vh;
+    }
+
+    span{
+        display: block;
+    }
+    input[type=submit]{
+        margin-bottom: 30px;
+    }
+
+    .item{
+        width: 93%;
+        margin: 10px 5px;
+    }
+
+    h3{
+        text-align: center;
+    }
+}
